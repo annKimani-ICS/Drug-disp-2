@@ -1,0 +1,63 @@
+z<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="signup.css">
+    <title>Register Page Patient</title>
+</head>
+<body>
+    <div class="login patient">
+        <h2 class="active">patient registration</h2>
+        <form action="patientreg.php" method="post">
+            <input type="text" class="text" name="patient_nat_id" required>
+            <span><i class="bx bxs-user-account"></i>National ID no:</span>
+            <br><br><br><br>
+
+            <input type="text" class="text" name="patient_name" required>
+            <span><i class="bx bxs-user-account"></i>patient name:</span>
+            <br><br><br><br>
+
+            <input type="text" class="text" name="patient_address" required>
+            <span><i class="bx bxs-map"></i>patient address:</span>
+            <br><br><br><br>
+
+            <input type="email" class="text" name="patient_email" required>
+            <span><i class="bx bxs-envelope"></i>Email address:</span>
+            <br><br><br><br>
+
+            <input type="tel" class="text" name="patient_phone" required>
+            <span><i class="bx bxs-phone"></i>phone number:</span>
+            <br><br><br><br>
+
+            <input type="date" class="text" name="patient_age" required>
+            <span><i class="bx bxs-time"></i>Date of birth:</span>
+            <br><br><br><br>
+
+            <input type="password" class="text" name="patient_password" required>
+            <span><i class="bx bxs-lock"></i>password</span>
+            <br><br><br><br>
+
+            <input type="password" class="text" name="confirm_password" required>
+            <span><i class="bx bxs-lock"></i>Confirm password</span>
+            <br><br><br><br>
+          
+            <button class="signin">Register</button>
+            <input type="button" class="signin" value="Cancel" onclick="goHome()">
+
+            <a class="login-register" href="../login/patientlogin.html">Already have an account? Register here.</a>
+            <hr>
+        </form>     
+      </div>  
+      
+      
+      <script>
+        function goHome(){
+            window.location.href = "signup.html";
+        }
+      </script>
+</body>
+</html>
+

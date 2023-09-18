@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="signup.css">
+    <title>Register Page</title>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="../homepage/homepage.html">Home</a>
+      </li>
+      <li>
+        <a href="../login/login.html"><br>Login</a>
+      </li>
+    </ul>
+  </nav>
+
+    <div class="login">
+      <center><h1>Welcome!</h1></center>
+      <center><h2>Register to begin your journey</h2></center>
+      <form action="login.php" method="post" autocomplete="on">
+        <form>
+        <h2>Register as:</h2>
+        <select id="userType" name="userType">
+          <option value="patient">Patient</option>
+          <option value="doctor">Doctor</option>
+          <option value="pharmacy">Pharmacy</option>
+          <option value="pharcomp">Pharmaceutical Company</option>
+        </select>
+
+        <br><br>
+
+        <input type="button" class="signin" value="Register" onclick="login()">
+        <input type="button" class="signin" value="Cancel" onclick="goHome()">
+
+        <a class="login-register" href="../login/login.html">Already have an account? Login here.</a>
+        <hr>
+      </form>
+    </div>   
+    
+    
+    <script>
+      function login() {
+        var userType = document.getElementById("userType").value;
+        if (userType == "patient") {
+          window.location.href = "patientreg.html";
+        } else if (userType == "doctor") {
+          window.location.href = "doctorreg.html";
+        } else if (userType == "pharmacy") {
+          window.location.href = "pharmacyreg.html";
+        } else if (userType == "pharcomp") {
+          window.location.href = "pharcompreg.html";
+        } else if (userType == "admin") {
+          window.location.href = "adminreg.html";
+        } else {
+          alert("Please select a user type");
+        }
+      }
+
+      function goHome(){
+        window.location.href = "../homepage/homepage.html"
+      }
+      </script>
+</body>
+</html>
+

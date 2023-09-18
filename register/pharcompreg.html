@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="signup.css">
+    <title>Register Page Pharmaceutical Company</title>
+</head>
+<body>
+    <div class="login company">
+        <h2 class="active">Company registration</h2>
+        <form action="pharcompreg.php" method="post">
+            <input type="text" class="text input" name="phar_comp_name" required>
+            <span><i class="bx bxs-user-account"></i>Pharmaceutical Company name:</span>
+            <br><br><br><br>
+
+            <input type="text" class="text input" name="phar_comp_phone" required>
+            <span><i class="bx bxs-phone"></i>PHONE NUMBER:</span>
+            <br><br><br><br>
+
+            <input type="text" class="text input" name="phar_comp_address" required>
+            <span><i class="bx bxs-map"></i>PHYSICAL ADDRESS:</span>
+            <br><br><br><br>
+
+            <input type="password" class="text input" name="phar_comp_password" required>
+            <span><i class="bx bxs-lock"></i>password:</span>
+            <br><br><br><br>
+
+            <input type="password"  class="text input" name="confirm_password" required>
+            <span><i class="bx bxs-lock"></i>confirm password:</span>
+            <br>
+          
+            <button class="signin">Register</button>
+            <input type="button" class="signin" value="Cancel" onclick="goHome()">
+
+            <a class="login-register" href="../login/pharcomplogin.html">Already have an account? Register here.</a>
+            <hr>
+        </form>     
+      </div>  
+      
+      
+      <script>
+        function goHome(){
+            window.location.href = "signup.html";
+        }
+      </script>
+</body>
+</html>
+

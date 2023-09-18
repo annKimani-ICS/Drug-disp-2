@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="login.css">
+    <title>Login Page Pharmacy</title>
+</head>
+<body>
+    <div class="login">
+        <h2 class="active">pharmacy sign in</h2>
+        <form action="pharmacylogin.php" method="post">
+            <input type="text"  class="text input"  name="pharmacy_name" required>
+            <span>pharmacy name:</span>
+            <br><br><br><br>
+
+            <input type="password"  class="text input" name="pharmacy_password" required>
+            <span>password</span>
+            <br>
+          
+            <button class="signin">Sign In</button>
+            <input type="button" class="signin" value="Cancel" onclick="goHome()">
+        
+            <a class="login-register" href="../register/pharmacyreg.html">Don't have an account? Register here.</a>
+            <hr>
+        </form>     
+      </div>   
+      
+      
+      <script>
+        function goHome(){
+            window.location.href = "login.html";
+        }
+      </script>
+</body>
+</html>
+
