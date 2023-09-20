@@ -1,0 +1,37 @@
+{
+	"folders": [
+		{
+			"path": "../AddingPharmacy"
+		},
+		{
+			"path": "../AddingPharComp"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../General Login"
+		},
+		{
+			"path": "../EditandDelete"
+		},
+		{
+			"path": "../homepage"
+		},
+		{
+			"path": "../loginpage"
+		},
+		{
+			"path": "../AddingDoctors"
+		},
+		{
+			"path": "../adminpage"
+		},
+		{
+			"path": "../AddingPatients"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "homepage"
+	}
+}

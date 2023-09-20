@@ -1,155 +1,115 @@
 /* Reset default styles */
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  height: 100vh;
-  background: url("pharmacy.jpg") no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.navbar {
-  background-color: #fff;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background-color: #333;
-}
-
-.navbar ul{
-  list-style: none;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-}
-
-.navbar ul li {
-  display: inline;
-  margin: 0 10px;
-}
-
-.navbar ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  padding: 10px 15px;
-  transition: .5s ease;
-}
-
-.navbar ul li a:hover {
-  background-color: #666;
-  border-radius: 10px;
-}
-
-.logo {
-  width: 100px;
-  height: 100px;
-}
-
-.hero {
-  text-align: center;
-  padding: 50px;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero h1{
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  font-size: 50px;
-}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   
-
-.main h1 {
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.tag {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.h-button{
-  margin: 20px 0;
-  height: 70px;
-  text-align: center;
-  padding: 40px;
-}
-
-.btn-1 {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 20px 25px;
-  margin: 5px;
-  font-size: 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: .5s ease;
-}
-
-.btn-1:hover{
-  background-color: #666;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  margin-top: 50px;
-}
-
-.grid img {
-  width: 100%;
-}
-
-
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-  font-size: 14px;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .navbar {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+  
   .hero {
-    padding: 30px;
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
   }
   
   .main h1 {
-    font-size: 24px;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
   }
   
   .tag {
-    font-size: 16px;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
   }
-}
-
-.copyright{
-position: relative;
-text-align: center;
-background-color: #333;
-height: 30px;
-padding: 40px;
-}
-
-.copyright p{
-  color: wheat;
-  text-align: center;
-}
+  
+  button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-top: 50px;
+  }
+  
+  .grid img {
+    width: 100%;
+  }
+  
+  ul {
+    list-style: none;
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  
+  ul li a:hover {
+    background-color: #666;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 30px;
+    }
+    
+    .main h1 {
+      font-size: 24px;
+    }
+    
+    .tag {
+      font-size: 16px;
+    }
+  }
+  
+  .copyright{
+    text-align: center;
+    position: relative;
+    top: 230px;
+  }
