@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8ac8a26b33.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="prototype.css">
+    <title>MediDispense - Your Trusted Drug Dispensing Tool</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <img src="health.png" alt="MediDispense.logo" class="logo">
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#partnerships">Partnerships</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Welcome to MediDispense</h1>
+            <p>Your Trusted Drug Dispensing Tool</p>
+            <button  href = "../login/login.html"class = 'btn'>Login</button>
+            <button  href = "../signup/signup.html" class = 'btn'>Sign Up</button>
+        </section>
+
+    </header>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>MediDispense is your go-to solution for efficient and secure drug dispensing. We are dedicated to simplifying the process of medication distribution, ensuring patients receive the right medications at the right time.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2>Features</h2>
+        <div class="feature">
+            <img src="feature1.jpg" alt="Feature 1">
+            <h3>Automated Dispensing</h3>
+            <p>Our cutting-edge tool automates the medication dispensing process, reducing errors and saving time.</p>
+        </div>
+        <div class="feature">
+            <img src="feature2.jpg" alt="Feature 2">
+            <h3>Inventory Management</h3>
+            <p>Keep track of medication inventory in real-time, ensuring you never run out of essential drugs.</p>
+        </div>
+        <div class="feature">
+            <img src="feature3.jpg" alt="Feature 3">
+            <h3>Secure and Compliant</h3>
+            <p>We prioritize security and compliance, so you can trust us with your patients' health.</p>
+        </div>
+    </section>
+
+    <!-- Partnerships Section -->
+    <section class="partnerships" id="partnerships">
+        <h2>Partnerships</h2>
+        <p>We are proud to partner with leading pharmaceutical companies and healthcare providers to enhance our drug dispensing tool's capabilities and ensure the best possible service for our users.</p>
+        <ul>
+            <li>Partner 1</li>
+            <li>Partner 2</li>
+            <li>Partner 3</li>
+        </ul>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <blockquote>
+                "MediDispense has transformed our pharmacy operations. It's intuitive, reliable, and has greatly reduced medication errors."
+            </blockquote>
+            <p>- Dr. Sarah Johnson</p>
+        </div>
+        <div class="testimonial">
+            <blockquote>
+                "I can't imagine managing our clinic's medication dispensing without MediDispense. It's a game-changer!"
+            </blockquote>
+            <p>- John Smith, RN</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to get started with MediDispense, please don't hesitate to contact us.</p>
+        <div class="contact-form">
+            <form action="contact.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 MediDispense</p>
+    </footer>
+</body>
+</html>

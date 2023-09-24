@@ -1,9 +1,11 @@
 <?php
 session_start();
 
-$username = $_SESSION["userid"];
-$user = $_SESSION["user"];
-$ID = $_SESSION["user"]["patient_nat_id"];
+include('../loginpage/login.php');
+
+$username = $_SESSION["username"];
+$user = $_SESSION["user_type_select"];
+$ID = $_SESSION["patient_nat_id"];
 
 ?>
 

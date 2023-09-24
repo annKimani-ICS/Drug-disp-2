@@ -4,12 +4,13 @@
   <title>Home-Page</title>
     <script src="https://kit.fontawesome.com/8ac8a26b33.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="home.css">
-
 </head>
 <ul>
     <li><a href="#users">USERS</a></li>
     <li><a href="#features">FEATURES</a></li>
     <li><a href="#about">ABOUT</a></li>
+    <li><a href="#patnerships">PATNERSHIPS</a></li>
+    <li><a href="testimonials">TESTIMONIALS</a></li>
     <li><a href="#contact">CONTACT INFO</a></li>
     
   </ul>
@@ -22,11 +23,6 @@
     <div class="main">
      <center><h1>WELCOME</h1></center> 
       <center><h1>Where your health is our wealth</h1></center>
-
-
-
-
-
 
       <center><p class="tag">Accelerate Your Drug Dispensing Operations</p>
       <div>
@@ -44,3 +40,8 @@
   </div>
 </body>
 </html>
+
+<?php
+
+include("inc/footer.php");
+ ?>

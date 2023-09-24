@@ -1,0 +1,250 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, h3, p, ul, li, blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Header Styles */
+.header {
+    background-image: url('pharmacy.jpg'); /* Add your background image URL here */
+    background-size: cover;
+    background-position: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styles */
+.logo {
+    max-height: 50px; /* Adjust the height as needed */
+    margin-left: 20px; /* Adjust the margin for spacing */
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5em;
+    position: absolute;
+    transition: background-color 0.3s ease;
+    top: 0;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    float: left;
+    margin-right: 20px;
+    position: relative; /* Add relative positioning for dropdowns */
+}
+
+.navbar a {
+    color: #1a1717;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: flex ;
+    overflow: hidden;
+    text-decoration: none;
+    
+}
+
+.navbar a:hover {
+    background-color: #0056b3;
+}
+
+/* Submenu Styles */
+.navbar li:hover ul {
+    display: block;
+}
+
+.navbar ul ul {
+    display: flex;
+    position: absolute;
+    background-color: #333;
+    width: 150px;
+    top: 40px; /* Adjust the top position as needed */
+    left: 0;
+}
+
+.navbar ul ul li {
+    float: none;
+    margin-right: 0;
+}
+
+.navbar ul ul a {
+    padding: 10px 20px;
+}
+
+/* Mobile Responsive Navigation */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        background-color: #333;
+        width: 100%;
+        position: absolute;
+        top: 50px; /* Adjust the top position as needed */
+        left: 0;
+    }
+
+    .navbar li {
+        float: none;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .navbar li:hover ul {
+        display: block;
+    }
+
+    .navbar ul ul {
+        position: static;
+        width: 100%;
+        display: none;
+        background-color: #333;
+    }
+}
+
+
+/* Hero Section Styles */
+.hero {
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Sections Styles */
+section {
+    padding: 40px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Features Section Styles */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.feature h3 {
+    margin-top: 20px;
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonial {
+    margin-bottom: 20px;
+}
+
+/* Contact Section Styles */
+.contact {
+    text-align: center;
+}
+
+.contact-form label,
+.contact-form textarea,
+.contact-form input {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+/* Login and Signup Buttons Styles */
+.login-button,
+.signup-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover,
+.signup-button:hover {
+    background-color: #0056b3;
+}
