@@ -25,7 +25,7 @@ $ID = $_SESSION["patient_nat_id"];
 
 <nav>
   <ul>
-    <li><a href="#">Home</a></li>
+    <li><a href="../homepage/index.php">Home</a></li>
     <li><a href="#Prescriptions">Prescriptions</a></li>
     <li><a href="#"><i class='bx bxs-user-account'></i><br><?php echo $username?> </a></li>
     <li><a href="../logout.php"><i class='bx bxs-exit'></i><br>Logout</a></li>

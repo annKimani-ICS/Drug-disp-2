@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8ac8a26b33.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="proto.css">
+    <link rel="stylesheet" href="styles.css">
     <title>MediDispense - Your Trusted Drug Dispensing Tool</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,15 +49,13 @@
   
     </div>
     <div class="offer-col">
-      <h3>Rings of Saturn</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, odit! Soluta sed ipsum quo amet nam! Corrupti
-        laboriosam facilis illo provident, ill</p>
+      <h3>Inventory Management</h3>
+      <p>Keep track of medication inventory in real-time, ensuring you never run out of essential drugs.</p>
     
     </div>
     <div class="offer-col">
-      <h3>Jupiter's Red Eye</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, odit! Soluta sed ipsum quo amet nam! Corrupti
-        laboriosam facilis illo provident, ill</p>
+      <h3>Secure and Compliant</h3>
+      <p>We prioritize security and compliance, so you can trust us with your patients' health.</p>
     
     </div>
     </div>
