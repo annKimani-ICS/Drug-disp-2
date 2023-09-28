@@ -17,9 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             if ($row) {
                 if ($password == $row['patient_password']){
-                    $_SESSION["userid"] = $row['patient_name'];
+                    // STORE THE SESSION VARIABLE FOR USERNAME, USER TYPE AND SSN HERE
                     $_SESSION["user"] = $row;
-
+                    $_SESSION["user_type"] = "patient";
                     $query->close();
                     $conn->close();
             

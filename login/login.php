@@ -1,29 +1,98 @@
 <?php
-require("connectgen.php");
-if($_SERVER==["REQUEST METHOD"]=="POST"){
-    $patient_id=$_POST["credentials_id"];
-    $patient_password=$_POST["credentials_password"];
 
-    $stmt = $conn->prepare("SELECT First_Name FROM add_patients WHERE Patient_ID = ? AND Password = ?");
-    $stmt->bind_param("is", $patient_id, $patient_password);
+require_once("connect.php");
 
-    $stmt->execute();
+if (isset($_POST["login"])) {
 
-    // Bind the result
-    $stmt->bind_result($name);
+    $P_username = mysqli_real_escape_string($conn, $_POST["username"]);
+    $P_user_type_select = mysqli_real_escape_string($conn, $_POST["user_type_select"]);
+    $P_password = mysqli_real_escape_string($conn, $_POST["password"]);
 
-    // Check if a matching record is found
-    if ($stmt->fetch()) {
-        // Successful login, grant access
-        echo "Welcome" . $name;
+    if ($P_user_type_select == "patient") {
+        $sqlquery = "SELECT * FROM tblpatient WHERE patient_name = '$P_username' LIMIT 1";
+        $query_result = $conn->query($sqlquery);
+        if ($query_result->num_rows > 0) {
+           
+            $_SESSION["control"] = $query_result->fetch_assoc();
+            $password_stored = $_SESSION["control"]["patient_password"];
+            $stored_username = $_SESSION["control"]["patient_name"];
+
+            if ($P_username === $stored_username && password_verify($P_password, $password_stored)) {
+                 // STORE THE SESSION VARIABLE FOR USERNAME, USER TYPE AND SSN HERE
+                 $_SESSION['username'] = $stored_username;
+                 $_SESSION['user'] = $P_user_type_select;
+                 $_SESSION['patient_nat_id'] = $_SESSION['control']['patient_nat_id'];
+                 
+                header('Location: #');
+                exit;
+            } else {
+                header('Location: index.html');
+                exit;
+            }
+
+        }
+
+
+    } else if ($P_user_type_select == "doctor") {
+        $sqlquery = "SELECT * FROM tbldoctor WHERE doc_name = '$P_username' LIMIT 1";
+        $query_result = $conn->query($sqlquery);
+        if ($query_result->num_rows > 0) {
+            $_SESSION["control"] = $query_result->fetch_assoc();
+            $password_stored = $_SESSION["control"]["doc_password"];
+            $stored_username = $_SESSION["control"]["doc_name"];
+
+            if ($P_username === $stored_username && password_verify($P_password, $password_stored)) {
+                header('Location: ../AddingDoctors/addingDoctor.html');
+                exit;
+            } else {
+                header('Location: index.html');
+                exit;
+            }
+
+        }
+
+
+    } else if ($P_user_type_select == "pharmacist") {
+        $sqlquery = "SELECT * FROM tblpharmacy WHERE pharmacy_name = '$P_username' LIMIT 1";
+        $query_result = $conn->query($sqlquery);
+        if ($query_result->num_rows > 0) {
+            $_SESSION["control"] = $query_result->fetch_assoc();
+            $password_stored = $_SESSION["control"]["pharmacy_password"];
+            $stored_username = $_SESSION["control"]["pharmacy_name"];
+
+            if ($P_username === $stored_username && password_verify($P_password, $password_stored)) {
+                header('Location: ../AddingPharmacy/index.html');
+                exit;
+            } else {
+                header('Location: index.html');
+                exit;
+            }
+
+        }
+    } else if ($P_user_type_select == "admin") {
+        $sqlquery = "SELECT * FROM tbladmin WHERE admin_name = '$P_username' LIMIT 1";
+        $query_result = $conn->query($sqlquery);
+        if ($query_result->num_rows > 0) {
+            $_SESSION["control"] = $query_result->fetch_assoc();
+            $password_stored = $_SESSION["control"]["admin_password"];
+            $stored_username = $_SESSION["control"]["admin_name"];
+
+            if ($P_username === $stored_username && password_verify($P_password, $password_stored)) {
+                header('Location: ../admin/admin.html');
+                exit;
+            } else {
+                header('Location: index.html');
+                exit;
+            }
+
+        }
     } else {
-        // Invalid credentials, deny access
-        echo "Invalid credentials. Please try again.";
+        header('Location: index.html');
+        exit;
     }
 
-    // Close the statement
-    $stmt->close();
+
+
 }
 
-$conn->close();
 ?>

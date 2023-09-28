@@ -23,6 +23,10 @@ if (isset($_POST["login"])) {
             $_SESSION["control"] = $query_result->fetch_assoc();
             $password_stored = $_SESSION["control"]["patient_password"];
             $stored_username = $_SESSION["control"]["patient_name"];
+            // STORE THE SESSION VARIABLE FOR USERNAME, USER TYPE AND SSN HERE
+            $_SESSION['username'] = $stored_username;
+            $_SESSION['user'] = $P_user_type_select;
+            $_SESSION['patient_nat_id'] = $_SESSION['control']['patient_nat_id'];
 
             if ($P_username === $stored_username && password_verify($P_password, $password_stored)) {
                 header('Location: #');

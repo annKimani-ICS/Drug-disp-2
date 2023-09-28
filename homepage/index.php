@@ -32,7 +32,7 @@
   <h1>Welcome to MediDispense</h1>
   <p >Your Trusted Drug Dispensing Tool</p>
   <a href="../register/signup.html" class = 'hero-btn'>Sign Up</a>
-  <a  href = "../loginpage/index.html"class = 'hero-btn'>Login</a>
+  <a  href = "../login/login.html"class = 'hero-btn'>Login</a>
 </div>
 
   </section>
