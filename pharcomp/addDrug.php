@@ -8,7 +8,9 @@ $ID = $_SESSION["user"]["phar_comp_name"];
 $error = '';
 
 $drug_trade_name = $_POST["drug_trade_name"];
+$drug_image = $_POST["drug_image"];
 $drug_formula = $_POST["drug_formula"];
+$drug_category = $_POST["drug_category"];
 $drug_expiry = $_POST["drug_expiry"];
 $drug_company = $_POST["drug_company"];
 
@@ -31,8 +33,8 @@ if (empty($error)) {
         $error = "This drug already exists in your list.";
     } else {
         $insertQuery = "
-        INSERT INTO `tbldrugs`(`drug_trade_name`, `drug_formula`, `drug_expiry`, `drug_company`)
-        VALUES ('$drug_trade_name','$drug_formula','$drug_expiry','$drug_company')
+        INSERT INTO `tbldrugs`(`drug_trade_name`,`drug_image`, `drug_formula`,`drug_category`,`drug_expiry`, `drug_company`)
+        VALUES ('$drug_trade_name','$drug_image','$drug_formula','$drug_category','$drug_expiry','$drug_company')
         ";
         if ($conn->query($insertQuery) === TRUE) {
             echo "<script>alert('Drug added successfully');

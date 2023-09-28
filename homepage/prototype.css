@@ -1,24 +1,93 @@
 /* Reset some default styles for better consistency */
-body, h1, h2, h3, p, ul, li, blockquote {
+* {
     margin: 0;
     padding: 0;
 }
 
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+      url('pharmacy.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-self: center;
+  }
+  nav img {
+    width: 150px;
+  }
+  .nav-links {
+    flex: 1;
+    text-align: right;
+  }
+  .nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    color: #fff;
+  }
+  .nav-links ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #ffff;
+  }
+  .nav-links ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #6489a4;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  .nav-links ul li:hover::after {
+    width: 100%;
+  }
+  .text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .text-box h1 {
+    font-size: 62px;
+  }
+  .text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+  }
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 40px;
+  
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background: transparent;
+    transition: 1s;
+  }
+
 /* Base Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
-
-/* Header Styles */
-.header {
-    background-image: url('pharmacy.jpg'); /* Add your background image URL here */
-    background-size: cover;
-    background-position: center;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 /* Logo Styles */
@@ -28,6 +97,7 @@ body {
 }
 
 /* Navigation Bar Styles */
+/*
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -38,7 +108,7 @@ body {
     top: 0;
     width: 100%;
 }
-
+/*
 .navbar ul {
     list-style-type: none;
     margin: 0;
@@ -48,7 +118,7 @@ body {
 .navbar li {
     float: left;
     margin-right: 20px;
-    position: relative; /* Add relative positioning for dropdowns */
+    position: relative; 
 }
 
 .navbar a {
@@ -65,7 +135,7 @@ body {
     background-color: #0056b3;
 }
 
-/* Submenu Styles */
+ Submenu Styles 
 .navbar li:hover ul {
     display: block;
 }
@@ -75,7 +145,7 @@ body {
     position: absolute;
     background-color: #333;
     width: 150px;
-    top: 40px; /* Adjust the top position as needed */
+    top: 40px; 
     left: 0;
 }
 
@@ -87,10 +157,11 @@ body {
 .navbar ul ul a {
     padding: 10px 20px;
 }
+*/
 
 /* Mobile Responsive Navigation */
 @media (max-width: 768px) {
-    .navbar ul {
+    .nav-links ul {
         display: none;
         background-color: #333;
         width: 100%;
@@ -99,17 +170,17 @@ body {
         left: 0;
     }
 
-    .navbar li {
+    .nav-links li {
         float: none;
         margin-right: 0;
         text-align: center;
     }
 
-    .navbar li:hover ul {
+    .nav-links li:hover ul {
         display: block;
     }
 
-    .navbar ul ul {
+    .nav-links ul ul {
         position: static;
         width: 100%;
         display: none;
@@ -119,22 +190,10 @@ body {
 
 
 /* Hero Section Styles */
-.hero {
-    background-size: cover;
-    text-align: center;
-    padding: 100px 0;
-    color: #fff;
-}
 
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.cta-button {
+.btn {
     display: inline-block;
     background-color: #007BFF;
-    color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
@@ -142,22 +201,11 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
+.btn:hover {
     background-color: #0056b3;
 }
 
 /* Sections Styles */
-section {
-    padding: 40px;
-    background-color: #fff;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
 
 /* Features Section Styles */
 .features {
