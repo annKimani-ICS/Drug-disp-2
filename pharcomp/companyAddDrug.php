@@ -45,7 +45,7 @@ $ID = $_SESSION["user"]["phar_comp_name"];
             <span>DRUG trade name:</span>
             <br><br><br><br>
 
-            <input type="jpeg"  class="text" name="drug_image" required>
+            <input type="file"  class="text" name="drug_image" required>
             <span>DRUG image:</span>
             <br><br><br><br>
 

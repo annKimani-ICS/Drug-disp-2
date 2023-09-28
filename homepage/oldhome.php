@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home-Page</title>
+    <script src="https://kit.fontawesome.com/8ac8a26b33.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="home.css">
+</head>
+<ul>
+    <li><a href="#users">USERS</a></li>
+    <li><a href="#features">FEATURES</a></li>
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#patnerships">PATNERSHIPS</a></li>
+    <li><a href="testimonials">TESTIMONIALS</a></li>
+    <li><a href="#contact">CONTACT INFO</a></li>
+    
+  </ul>
+<body>
+  <div class="navbar">
+    
+
+  </div>
+  <div class="hero">
+    <div class="main">
+     <center><h1>WELCOME</h1></center> 
+      <center><h1>Where your health is our wealth</h1></center>
+
+      <center><p class="tag">Accelerate Your Drug Dispensing Operations</p>
+      <div>
+        <button type="button"><span></span><a href="../loginpage/index.html">LOGIN</a></button>
+
+
+        <button type="button"><span></span>Sign up</button>
+      </div>
+    </div> </center>    
+
+  </div>
+
+  <div class="copyright">
+    <p>&copy; 2023 Drug Dispensing Tool. All rights reserved.</p>
+  </div>
+</body>
+</html>
+
+<?php
+
+include("inc/footer.php");
+ ?>
