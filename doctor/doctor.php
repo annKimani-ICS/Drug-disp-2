@@ -1,8 +1,10 @@
 <?php
 session_start();
 
-$username = $_SESSION["userid"];
-$user = $_SESSION["user"];
+include('../login/login.php');
+
+$username = $_SESSION["user"]["doc_name"];
+$user = $_SESSION["user_type"];
 $ID = $_SESSION["user"]["doc_hos_id"];
 
 ?>
@@ -21,26 +23,15 @@ $ID = $_SESSION["user"]["doc_hos_id"];
 </head>
 <body>
 
+<section class = "header">
     <nav>
         <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#Patients">Manage Patients</a>
-          </li>
-          <li>
-            <a href="#Drugs">Prescribe Drugs</a>
-          </li>
-          <li>
-            <a href="#Prescriptions">Prescriptions</a>
-          </li>
-          <li>
-            <a href="#"><i class='bx bxs-user-account'></i><br><?php echo $username?> </a>
-          </li>
-          <li>
-            <a href="../logout.php"><i class='bx bxs-exit'></i><br>Logout</a>
-          </li>
+          <li><a href="../homepage/index.php">Home</a></li>
+          <li><a href="#Patients">Manage Patients</a></li>
+          <li><a href="#Drugs">Prescribe Drugs</a></li>
+          <li><a href="#Prescriptions">Prescriptions</a></li>
+          <li><a href="#"><i class='bx bxs-user-account'></i><br><?php echo $username?></a></li>
+          <li><a href="../logout.php"><i class='bx bxs-exit'></i><br>Logout</a></li>
         </ul>
     </nav>
 
@@ -48,6 +39,8 @@ $ID = $_SESSION["user"]["doc_hos_id"];
     <h1 style="font-family: 'Kaushan Script', cursive;">Welcome Doctor <?php echo $username?> </h1>
 
     <br><br><br><br>
+
+</section>
     <div class="table-1">
           <h2 id="Patients">Patients</h2>
           <a class="btn btn-primary" href="patientList.php" role="button">Add New Patient</a>
@@ -186,6 +179,6 @@ $ID = $_SESSION["user"]["doc_hos_id"];
 
     </div>
       
-    
+    <?php include('../inc/footer.php'); ?>
 </body>
 </html>

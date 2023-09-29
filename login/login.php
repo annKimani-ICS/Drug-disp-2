@@ -23,7 +23,7 @@ if (isset($_POST["login"])) {
                  $_SESSION['user'] = $P_user_type_select;
                  $_SESSION['patient_nat_id'] = $_SESSION['control']['patient_nat_id'];
                  
-                header('Location: #');
+                header('Location: ../patient/patient.php');
                 exit;
             } else {
                 header('Location: index.html');
@@ -42,7 +42,11 @@ if (isset($_POST["login"])) {
             $stored_username = $_SESSION["control"]["doc_name"];
 
             if ($P_username === $stored_username && password_verify($P_password, $password_stored)) {
-                header('Location: ../AddingDoctors/addingDoctor.html');
+                $_SESSION['username'] = $stored_username;
+                $_SESSION['user'] = $P_user_type_select;
+                $_SESSION['doc_hos_id'] = $_SESSION['control']['doc_hos_id'];
+                
+                header('Location: ../doctor/doctor.php');
                 exit;
             } else {
                 header('Location: index.html');
@@ -69,7 +73,23 @@ if (isset($_POST["login"])) {
             }
 
         }
-    } else if ($P_user_type_select == "admin") {
+    }else if($P_user_type_select == "pharcomp"){
+        $sqlquery = "SELECT * FROM pharcomp WHERE phar_comp_name = '$P_username' LIMIT 1";
+        $query_result = $conn->query($sqlquery);
+        if($query_result->num_rows > 0){
+            $_SESSION["control"] = $query_result->fetch_assoc();
+            $password_stored = $_SESSION["control"]["phar_comp_password"];
+            $stored_username = $_SESSION["control"]["phar_comp_name"];
+
+            if ($P_username === $stored_username && password_verify($P_password, $password_stored)) {
+                header('Location: ../pharcomp/pharcomp.php');
+                exit;
+            } else {
+                header('Location: ../register/signup.html');
+                exit;
+            }
+        }
+    }else if ($P_user_type_select == "admin") {
         $sqlquery = "SELECT * FROM tbladmin WHERE admin_name = '$P_username' LIMIT 1";
         $query_result = $conn->query($sqlquery);
         if ($query_result->num_rows > 0) {

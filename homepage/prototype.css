@@ -223,6 +223,10 @@ body {
 .feature h3 {
     margin-top: 20px;
 }
+.branch{
+    display: flex;
+    flex-direction: row;
+}
 
 /* Testimonials Section Styles */
 .testimonials {

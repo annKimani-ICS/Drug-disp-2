@@ -1,5 +1,55 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
-
+*{
+  margin: 0%;
+  padding: 0%;
+}
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(hospital.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+nav {
+  width: 90%;
+  display: flex;
+  padding: 8% 10%;
+  justify-content: space-between;
+  align-self: center;
+}
+nav img {
+  width: 150px;
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+  color: #fff;
+}
+.nav-links ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffff;
+}
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #6489a4;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+}
 html {
   font-size: 62.5%;
 }
@@ -38,7 +88,7 @@ h2 {
   letter-spacing: 1px
 }
 
-table {
+/*.table-1 {
   width: 100%;
   min-width: 300px;
   margin-bottom: 2.4rem;
@@ -47,37 +97,37 @@ table {
   overflow: hidden;
 }
 
-table tr:nth-child(even) {
+.table-1 tr:nth-child(even) {
   background-color: rgb(46, 53, 62);
 }
 
-table th,
-table td:before {
+.table-1 th,
+.table-1 td:before {
   color: #11b2e8;
   text-transform: uppercase;
   width: 100%;
 }
 
-table th {
+.table-1 th {
   display: none;
 }
 
-table th,
-table td {
+.table-1 th,
+.table-1 td {
   margin: .5rem 2rem;
   text-align: left;
 }
 
-table td {
+.table-1 td {
   display: block;
   font-size: 90%;
 }
 
-table td:first-child {
+.table-1 td:first-child {
   padding-top: 1rem;
 }
 
-table td:last-child {
+.table-1 td:last-child {
   padding-bottom: 1rem;
 }
 
@@ -159,7 +209,52 @@ table td:before {
     border-bottom: none;
   }
 }
+*/
+* {
+  /* Change your font family */
+  font-family: sans-serif;
+}
 
+.content-table {
+  padding-left: 250px;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  align-self: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
 
 nav {
   max-width: 1400px;

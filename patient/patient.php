@@ -23,33 +23,38 @@ $ID = $_SESSION["user"]["patient_nat_id"];
 </head>
 <body>
 
-<nav>
-  <ul>
-    <li><a href="../homepage/index.php">Home</a></li>
-    <li><a href="#Prescriptions">Prescriptions</a></li>
-    <li><a href="#"><i class='bx bxs-user-account'></i><br><?php echo $username?> </a></li>
-    <li><a href="../logout.php"><i class='bx bxs-exit'></i><br>Logout</a></li>
-  </ul>
-</nav>
+<section class = "header">
+  <nav>
+    <div class="nav-links">
+    <ul>
+      <li><a href="../homepage/index.php">Home</a></li>
+      <li><a href="#Prescriptions">Prescriptions</a></li>
+      <li><a href="#"><i class='bx bxs-user-account'></i><br><?php echo $username?> </a></li>
+      <li><a href="../logout.php"><i class='bx bxs-exit'></i><br>Logout</a></li>
+    </ul>
+  </nav>
+  <div>
 
     <div class="container">
     <h1 style="font-family: 'Kaushan Script', cursive;">Welcome <?php echo $username?> </h1>
 
       <br><br><br><br>
-      
-      <div class="table-1">
-          <h2 id="Prescriptions">Pending Prescriptions</h2>
-          <p>Please pick them from your nearest pharmacy.</p>
 
-          <table>
-            <tbody>
-            <tr>
-                <th>Prescription ID</th>
-                <th>Patient ID</th>
-                <th>Doctor ID</th>
-                <th>Drug Name</th>
-                <th>Prescription Amount</th>
-                <th>Prescription Dosage</th>
+</section>
+      
+      <div class="content-table">
+        <h2 id="Prescriptions">Pending Prescriptions</h2>
+       <p>Please pick them from your nearest pharmacy.</p>
+
+         <table>
+          <tbody>
+           <tr>
+             <th>Prescription ID</th>
+              <th>Patient ID</th>
+              <th>Doctor ID</th>
+              <th>Drug Name</th>
+              <th>Prescription Amount</th>
+              <th>Prescription Dosage</th>
             </tr>
       
               <?php
