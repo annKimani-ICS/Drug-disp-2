@@ -21,21 +21,25 @@ $ID = $_SESSION["user"]["pharmacy_name"]
 </head>
 <body>
 
-<nav>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#Drugs">Manage Drugs</a></li>
-    <li><a href="#Pending">Prescriptions</a></li>
-    <li><a href="#History">History</a></li>
-    <li><a href="#"><i class='bx bxs-user-account'></i><br><?php echo $username?> </a></li>
-    <li><a href="../logout.php"><i class='bx bxs-exit'></i><br>Logout</a></li>
-  </ul>
-</nav>
+<section class = "header">
+  <nav>
+    <ul>
+      <li><a href="../homepage/index.php">Home</a></li>
+      <li><a href="#Drugs">Manage Drugs</a></li>
+      <li><a href="#Pending">Prescriptions</a></li>
+      <li><a href="#History">History</a></li>
+      <li><a href="#">Drugs Catalog</a></li>
+      <li><a href="#"><i class='bx bxs-user-account'></i><br><?php echo $username?> </a></li>
+      <li><a href="../logout.php"><i class='bx bxs-exit'></i><br>Logout</a></li>
+    </ul>
+  </nav>
 
     <div class="container">
     <h1 style="font-family: 'Kaushan Script', cursive;">Welcome <?php echo $username?> </h1>
 
     <br><br><br><br>
+
+</section>
     <div class="table-1">
           <h2 id="Drugs">Drugs</h2>
           <a class="btn btn-primary" href="pharmacyAddDrug.php" role="button">Add New Drug</a>

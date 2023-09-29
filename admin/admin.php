@@ -21,38 +21,27 @@ $user = $_SESSION["user"];
 </head>
 <body>
 
+<section class = "header">
   <nav>
-    <ul>
-      <li>
-        <a href="#">Home</a>
-      </li>
-      <li>
-        <a href="#Patients">Patients</a>
-      </li>
-      <li>
-        <a href="#Doctors">Doctors</a>
-      </li>
-      <li>
-        <a href="#Pharmaceutical">Companies</a>
-      </li>
-      <li>
-        <a href="#Pharmacies">Pharmacies</a>
-      </li>
-      <li>
-        <a href="#Admins">Admininstrators</a>
-      </li>
-      <li>
-        <a href="#Supervisors">Supervisors</a>
-      </li>
-      <li>
-        <a href="#"><i class='bx bxs-user-account'></i><br><?php echo $username?> </a>
-      </li>
-      <li>
-        <a href="../logout.php"><i class='bx bxs-exit'></i><br>Logout</a>
-      </li>
+    <ul><li><a href="../homepage/index.php">Home</a></li>
+      <li><a href="#Patients">Patients</a></li>
+      <li><a href="#Doctors">Doctors</a></li>
+      <li><a href="#Pharmaceutical">Companies</a></li>
+      <li><a href="#Pharmacies">Pharmacies</a></li>
+      <li><a href="#Admins">Admininstrators</a></li>
+      <li><a href="#Supervisors">Supervisors</a></li>
+      <li><a href="#">Drugs Catalog</a></li>  
+      <li><a href="#"><i class='bx bxs-user-account'></i><br><?php echo $username?> </a></li>
+      <li><a href="../logout.php"><i class='bx bxs-exit'></i><br>Logout</a></li>
 
     </ul>
   </nav>
+  <div class="container">
+    <h1 style="font-family: 'Kaushan Script', cursive;">Welcome <?php echo $username?> </h1>
+
+    <br><br><br><br>
+
+  </section>
 
 <div class="container">
   <h1 style="font-family: 'Kaushan Script', cursive;">Website Users</h1>

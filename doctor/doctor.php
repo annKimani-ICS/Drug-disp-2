@@ -30,6 +30,7 @@ $ID = $_SESSION["user"]["doc_hos_id"];
           <li><a href="#Patients">Manage Patients</a></li>
           <li><a href="#Drugs">Prescribe Drugs</a></li>
           <li><a href="#Prescriptions">Prescriptions</a></li>
+          <li><a href="#">Drugs Catalog</a></li>
           <li><a href="#"><i class='bx bxs-user-account'></i><br><?php echo $username?></a></li>
           <li><a href="../logout.php"><i class='bx bxs-exit'></i><br>Logout</a></li>
         </ul>

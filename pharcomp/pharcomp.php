@@ -20,11 +20,14 @@ $ID = $_SESSION["user"]["phar_comp_name"];
 </head>
 <body>
 
+<section class = "header">
+
 <nav>
   <ul>
     <li><a href="../homepage/index.php">Home</a></li>
     <li><a href="#Drugs">Manage Drugs</a></li>
     <li><a href="#Contracts">Contracts</a></li>
+    <li><a href="#">Drugs Catalog</a></li>
     <li><a href="#"><i class='bx bxs-user-account'></i><br><?php echo $username?> </a></li>
     <li><a href="../logout.php"><i class='bx bxs-exit'></i><br>Logout</a></li>
   </ul>
@@ -34,6 +37,8 @@ $ID = $_SESSION["user"]["phar_comp_name"];
     <h1 style="font-family: 'Kaushan Script', cursive;">Welcome <?php echo $username?> </h1>
 
     <br><br><br><br>
+
+    </section>
 
     <div class="table-1">
           <h2 id="Drugs">Drugs</h2>
