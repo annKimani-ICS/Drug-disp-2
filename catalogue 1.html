@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Drug Catalog</title>
+    <style>
+        /* CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #0073e6;
+        }
+        .dropdown-btn {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        /* Add more CSS styles as needed */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pharmacy Drug Catalog</h1>
+    </header>
+    <div class="container">
+        <h2>Drug Categories</h2>
+        <button class="dropdown-btn" onclick="toggleCategories()">Toggle Drug Categories</button>
+        <div id="categories" style="display: none;">
+            <ul>
+                <li><a href="#" onclick="toggleCategory('painRelief')">Pain Relief</a></li>
+                <li><a href="#" onclick="toggleCategory('vitaminsAndSupplements')">Allergies and Cold</a></li>
+                <li><a href="#" onclick="toggleCategory('entCare')">Ear, Nose and Throat care</a></li>
+                <li><a href="#" onclick="toggleCategory('coughColdnFlu')">Cough, cold and flu</a></li>
+                <li><a href="#" onclick="toggleCategory('stomachCareAndRelief')">Stomach pain Relief</a></li>
+            </ul>
+        </div>
+
+        <div id="painRelief" style="display: none;">
+            <h2>Pain Relief</h2>
+            <ul>
+                <li>Panadol - Description: A commonly used over-the-counter pain reliever.</li>
+                <li>Panadol xtra - Description: A commonly used over-the-counter pain reliever.</li>
+                <li>Maramoja  - Description: A commonly used over-the-counter pain reliever.</li>
+                <li>Sona moja - Description: A commonly used over-the-counter pain reliever.</li>
+                <li>Ibuprofen - Description: Non-steroidal anti-inflammatory drug (NSAID) for pain and inflammation.</li>
+                <li>Anusol Ointment- Description: A commonly used over-the-counter ointment.</li>
+                <li>Celcoxx - Description: A commonly used  pain reliever.</li>
+            </ul>
+        </div>
+
+        <div id="vitaminsAndSupplements" style="display: none;">
+            <h2>Vitamins And Supplements</h2>
+            <ul>
+                <li>Scotts emulsion- Description: Vitamins and minerals.</li>
+                <li>Abidec vit plus- Description: Vitamins and minerals.</li>
+                <li>Aquamarine Omega 3- Description: Vitamins and minerals.</li>
+            </ul>
+        </div>
+
+        <div id="entCare" style="display: none;">
+            <h2>Ear, Nose and Throat care</h2>
+            <ul>
+                <li>Otobiotic Ear drops- Description: Ear care.</li>
+                <li>Acular eye drops- Description: Eye care</li>
+                <li>Betadine mouthwash gargle- Description: Oral care.</li>
+            </ul>
+        </div>
+
+        <div id="coughColdnFlu" style="display: none;">
+            <h2>Cough, Cold and FLu</h2>
+            <ul>
+                <li>Actified cough syrup- Description:Cough, Cold and FLu .</li>
+                <li>Acyclovir 5% cream- Description: Cough, Cold and FLu</li>
+                <li>Aerovent inhaler 200 doses- Description: inhaler.</li>
+            </ul>
+        </div>
+
+        <div id="stomachCareAndRelief" style="display: none;">
+            <h2>Stomach pain relief</h2>
+            <ul>
+                <li>ABZ 400mg tablets- Description: Stomach care/ digestive health.</li>
+                <li>Eno calcium antacid- Description: Antiacid.</li>
+                <li>Cyclopam suspension- Description: anti bloating.</li>
+            </ul>
+        </div>
+
+
+    </div>
+
+    <script>
+        function toggleCategories() {
+            var categories = document.getElementById('categories');
+            if (categories.style.display === "none") {
+                categories.style.display = "block";
+            } else {
+                categories.style.display = "none";
+            }
+        }
+
+        function toggleCategory(categoryId) {
+            var category = document.getElementById(categoryId);
+            if (category.style.display === "none") {
+                category.style.display = "block";
+            } else {
+                category.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
