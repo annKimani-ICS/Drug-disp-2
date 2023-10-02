@@ -30,7 +30,7 @@ $user = $_SESSION["user"];
       <li><a href="#Pharmacies">Pharmacies</a></li>
       <li><a href="#Admins">Admininstrators</a></li>
       <li><a href="#Supervisors">Supervisors</a></li>
-      <li><a href="#">Drugs Catalog</a></li>  
+      <li><a href="../cat/catalogue.php">Drugs Catalog</a></li>  
       <li><a href="#"><i class='bx bxs-user-account'></i><br><?php echo $username?> </a></li>
       <li><a href="../logout.php"><i class='bx bxs-exit'></i><br>Logout</a></li>
 
