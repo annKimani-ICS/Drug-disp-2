@@ -27,7 +27,7 @@ $ID = $_SESSION["user"]["phar_comp_name"];
     <li><a href="../homepage/index.php">Home</a></li>
     <li><a href="#Drugs">Manage Drugs</a></li>
     <li><a href="#Contracts">Contracts</a></li>
-    <li><a href="#">Drugs Catalog</a></li>
+    <li><a href="../cat/catalogue.php">Drugs Catalog</a></li>
     <li><a href="#"><i class='bx bxs-user-account'></i><br><?php echo $username?> </a></li>
     <li><a href="../logout.php"><i class='bx bxs-exit'></i><br>Logout</a></li>
   </ul>
