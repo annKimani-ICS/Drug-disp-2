@@ -1,28 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drugs Catalogue</title>
-</head>
-<body>
-<nav>
-    <ul>
-      <li>
-        <a href="../homepage/index.php">Home</a>
-      </li>
-      <li>
-        <a href="../register/signup.html"><br>Register</a>
-      </li>
-      <li>
-        <a href="../login/login.html"><br>Login</a>
-    </ul>
-  </nav>
-</body>
-</html>
-
-
 <?php
+
 session_start();
 include "../login/connect.php";
 
@@ -166,7 +143,6 @@ function goBack() {
     window.history.back();
 }
 </script>
-
 
 </body>
 </html>
