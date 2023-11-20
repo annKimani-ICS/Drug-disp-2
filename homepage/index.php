@@ -24,7 +24,7 @@
         <li><a href="#partnerships">Partnerships</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#">Drugs Catalog</a></li>
+        <li><a href="../catalogue 1.html">Drugs Catalog</a></li>
       </ul>
       </div>
       <!--<i class="fa-solid fa-bars"  onclick="showMenu()"></i>-->
