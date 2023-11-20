@@ -1,10 +1,18 @@
 <?php
 session_start();
+require_once("connect.php");
 
-$username = $_SESSION["userid"];
-$user = $_SESSION["user"];
-$ID = $_SESSION["user"]["pharmacy_name"]
-
+// Check if session variables are set
+if (isset($_SESSION["userid"]) && isset($_SESSION["user"]) && isset($_SESSION["user"]["pharmacy_name"])) {
+    $username = $_SESSION["userid"];
+    $user = $_SESSION["user"];
+    $ID = $_SESSION["user"]["pharmacy_name"];
+} else {
+    // Handle the case where session variables are not set
+    $username = "Guest"; // Provide a default value or handle the error accordingly
+    $user = null;
+    $ID = null;
+}
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +36,7 @@ $ID = $_SESSION["user"]["pharmacy_name"]
       <li><a href="#Drugs">Manage Drugs</a></li>
       <li><a href="#Pending">Prescriptions</a></li>
       <li><a href="#History">History</a></li>
-      <li><a href="#">Drugs Catalog</a></li>
+      <li><a href="../cat/catalogue.php">Drugs Catalog</a></li>
       <li><a href="#"><i class='bx bxs-user-account'></i><br><?php echo $username?> </a></li>
       <li><a href="../logout.php"><i class='bx bxs-exit'></i><br>Logout</a></li>
     </ul>
